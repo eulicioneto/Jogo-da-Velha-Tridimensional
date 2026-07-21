@@ -1,6 +1,7 @@
 #include "tabuleiro.h"
 #include <stdio.h>
 
+//Preenchendo todas as posições do tabuleiro com espaços
 void inicializar(char m[3][3][3])
 {
     int coluna, nivel, linha;
@@ -56,7 +57,7 @@ int inserirPeca(char m[3][3][3], int coluna, int linha, char jogador)
 
     if(coluna < 0 || coluna > 2 || linha < 0 || linha > 2)
     {
-        return 0;  
+        return 0;  // Retorna 0 se a posição for inválida
     }
 
     for(nivel = 0; nivel < 3; nivel++)
@@ -64,9 +65,9 @@ int inserirPeca(char m[3][3][3], int coluna, int linha, char jogador)
         if(m[coluna][nivel][linha] == ' ')
         {
             m[coluna][nivel][linha] = jogador; 
-            return 1; 
+            return 1;   
         }
     }
 
-    return 0; 
+    return 0; // Retorna 0 se a coluna estiver cheia
 }

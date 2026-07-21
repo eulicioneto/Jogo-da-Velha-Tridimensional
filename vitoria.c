@@ -54,13 +54,15 @@ int verificarVitoria(char tabuleiro[3][3][3], char jogador)
 
                     if(coluna2 < 0 || coluna2 > 2 ||
                        nivel2 < 0 || nivel2 > 2 ||
-                       linha2 < 0 || linha2 > 2)
+                       linha2 < 0 || linha2 > 2){
                         continue;
+                       }
 
                     if(coluna3 < 0 || coluna3 > 2 ||
                        nivel3 < 0 || nivel3 > 2 ||
-                       linha3 < 0 || linha3 > 2)
+                       linha3 < 0 || linha3 > 2){
                         continue;
+                       }
 
                     if(tabuleiro[coluna2][nivel2][linha2] == jogador &&
                        tabuleiro[coluna3][nivel3][linha3] == jogador)
